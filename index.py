@@ -1,13 +1,10 @@
 import click 
 import requests 
+click.disable_unicode_literals_warning = True
 
-# Creat hello world program with string option parameter 
 @click.command()
-@click.option('--string', default='World', 
-	help='This is a greeting')
+def main(): 
+	click.echo("This is a CLI built with Click ✨")
 
-def hello(string):
-	click.echo("Hello, {}".format(string))
-
-if __name__=="__main__":
-	hello()
+if __name__ == "__main__":
+	main()
